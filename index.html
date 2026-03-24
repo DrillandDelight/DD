@@ -1,185 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drill & Delight Ice Cream</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drill & Delight</title>
 
-<style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #fff7fb; color: #333; }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: #fff8ef;
+        }
 
-    /* Header */
-    header {
-        text-align: center;
-        padding: 30px 10px;
-        background: #ff8db3;
-        color: white;
-    }
-    header img.logo {
-        width: 120px;
-    }
-    header h1 {
-        margin: 10px 0 5px;
-        font-size: 36px;
-    }
+        /* LOGO ANIMATION */
+        .logo {
+            width: 180px;
+            margin-top: 20px;
+            animation: breathe 3s infinite ease-in-out;
+        }
 
-    /* Hero Banner */
-    .hero {
-        width: 100%;
-        margin: auto;
-    }
-    .hero img {
-        width: 100%;
-        border-radius: 0;
-    }
+        @keyframes breathe {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
 
-    /* Sections */
-    .section {
-        max-width: 1000px;
-        margin: auto;
-        padding: 20px;
-    }
-    h2 {
-        color: #ff4f85;
-        margin-top: 40px;
-        font-size: 28px;
-    }
-    .menu-category {
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        margin-bottom: 20px;
-        box-shadow: 0 0 10px #ffe2ef;
-    }
-    .menu-category ul { padding-left: 20px; }
-    .price { font-weight: bold; color: #444; margin-bottom: 10px; }
+        h1 {
+            margin-top: 10px;
+            font-size: 32px;
+            color: #6d2e00;
+        }
 
-    /* Product Gallery */
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 20px;
-        margin-top: 20px;
-    }
-    .gallery img {
-        width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 0 10px #ffcde0;
-    }
+        .menu-section {
+            padding: 20px;
+        }
 
-    /* Contact Box */
-    .contact-box {
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 0 10px #ffe2ef;
-        margin-top: 20px;
-    }
+        .menu-image {
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
 
-    /* Footer */
-    footer {
-        background: #333;
-        color: white;
-        text-align: center;
-        padding: 15px;
-        margin-top: 40px;
-    }
-</style>
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 18px;
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1eb457;
+        }
+
+        .social {
+            margin-top: 30px;
+        }
+
+    </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
+    <!-- LOGO -->
     <img src="images/logo.jpg" class="logo" alt="Drill & Delight Logo">
+
     <h1>Drill & Delight</h1>
-    <p>Drill Pannu, Chill Pannu 🍧</p>
-</header>
 
-<!-- HERO BANNER -->
-<div class="hero">
-    <img src="images/banner2.JPG" alt="Banner">
-</div>
-
-<!-- MENU SECTION -->
-<div class="section">
-    <h2>🍧 Our Menu</h2>
-
-    <div class="menu-category">
-        <h3>🍊 Classical Fruits</h3>
-        <p class="price">₹120</p>
-        <ul>
-            <li>Mango</li>
-            <li>Pineapple</li>
-            <li>Litchi</li>
-            <li>Jamun</li>
-            <li>Kiwi</li>
-            <li>Sitaphal</li>
-            <li>Dragon Fruit</li>
-            <li>Guava</li>
-        </ul>
+    <!-- MENU -->
+    <div class="menu-section">
+        <h2>Menu</h2>
+        <img src="images/menu1.jpg" class="menu-image">
+        <img src="images/menu2.jpg" class="menu-image" style="margin-top:15px;">
+        <img src="images/menu3.jpg" class="menu-image" style="margin-top:15px;">
     </div>
 
-    <div class="menu-category">
-        <h3>🍓 Premium Berries</h3>
-        <p class="price">₹160</p>
-        <ul>
-            <li>Strawberry</li>
-            <li>Blueberry</li>
-            <li>Raspberry</li>
-            <li>Blackberry</li>
-            <li>Blackcurrant</li>
-        </ul>
-    </div>
+    <!-- WhatsApp Click-to-Chat -->
+    <a class="whatsapp-btn"
+       href="https://wa.me/919442400009?text=Hi%20I%20would%20like%20to%20order%20an%20icecream"
+       target="_blank">
+       💬 WhatsApp Us
+    </a>
 
-    <div class="menu-category">
-        <h3>🍫 Sweet Temptations</h3>
-        <p class="price">₹150</p>
-        <ul>
-            <li>Brownie</li>
-        </ul>
-    </div>
-</div>
-
-<!-- PRODUCT GALLERY -->
-<div class="section">
-    <h2>🍨 Customer Favourites</h2>
-
-    <div class="gallery">
-        <img src="images/cup-1.jpg" alt="Ice Cream 1">
-        <img src="images/Capture.JPG" alt="Ice Cream 2">
-        <img src="images/cup-3.jpg" alt="Ice Cream 3">
-        <img src="images/cup-4.jpg" alt="Ice Cream 4">
-        <img src="images/cup-5.jpg" alt="Ice Cream 5">
-    </div>
-</div>
-
-<!-- QR + CONTACT -->
-<div class="section">
-    <div class="contact-box">
-        <h2>📍 Visit Us</h2>
-        <p><strong>Address:</strong> 98/40, Gandhi St, Ramdoss Nagar, State Bank Of India Colony, Chitlapakkam, Chennai-600064</p>
-        <p><strong>Phone:</strong> 8754495013</p>
-        <p><strong>Timing:</strong> 4 PM – 10 PM</p>
-
-        <h3>📸 Follow Us</h3>
+    <!-- Instagram -->
+    <div class="social">
         <a href="https://www.instagram.com/drilldelight/" target="_blank">
-            <img src="images/Capture2.JPG" alt="Instagram QR" style="width:150px;">
+            <img src="images/Capture2.JPG" alt="Instagram" width="150">
         </a>
-
         <br><br>
-        <h3>💬 WhatsApp Us</h3>
-        <a href="https://wa.me/918754495013" target="_blank" 
-           style="display:inline-block; padding:10px 20px; background:#25D366; color:white; border-radius:8px; text-decoration:none; font-weight:bold;">
-           Chat on WhatsApp
+        <a href="https://www.instagram.com/drilldelight/" 
+           target="_blank"
+           style="color:#ff4f85; font-weight:bold; font-size:18px;">
+           👉 Follow us on Instagram
         </a>
     </div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-    © 2026 Drill & Delight. All Rights Reserved.
-</footer>
 
 </body>
 </html>
